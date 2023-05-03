@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
 <html>
   <head>
     <script>
@@ -32,7 +22,9 @@
               var a = document.createElement("a");
               a.download = files[i].name + ".png";
               a.href = dataUrl;
+              document.body.appendChild(a);
               a.click();
+              document.body.removeChild(a);
             };
           };
         }
@@ -45,7 +37,4 @@
       <input type="button" value="Convert to PNG" onclick="convertFiles()" />
     </form>
   </body>
-</html>
-
-
 </html>
